@@ -1,0 +1,20 @@
+OS Assignment 4
+Dev Utkarsh 
+Devansh Kumar
+
+Contribution:
+Dev Utkarsh:
+Set up segfault handler.
+Implement the logic to map the segments that cause segfault.
+Finding the way to access the segfault address.
+Basically the whole implementation including bonus.
+Devansh:
+Try to set up segmentation fault handler.
+Try to map memory to segfault causing vmem.
+
+Logic:
+We first directly run the program by invoking start method which causes segfault as, memory hasn't been mapped for it, and then to handle that seg fault, we map memory to the addess causing segfault. We find the segfault using one of the inbuilt method of sigaction.
+We then map only 4096 bytes of memory (standard page size) to the segfault causing address and count total such page faults and count the internal fragmentation using formula.
+
+Private github repository:
+https://github.com/deecod-dev/os_assginment4
